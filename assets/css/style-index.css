@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/background-header.png");
+  background-size: cover;
+}
+
+
+
+/* Navbar/Menu */
+.navbar{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+
+}
+
+.navbar .menu ul{   
+    display: flex;
+}
+.navbar .menu li{
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .menu li a{
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #DD7230;
+}
+
+hr{
+    width: 0px;
+    border: solid 2px transparent;
+    
+}
+.navbar .menu li:hover hr{
+    animation: hoverBlock .7s forwards;
+    width: 0px;
+}
+@keyframes hoverBlock {
+    from{
+        width: 0%;
+        transition: .3s;
+        background-color: #DD7230;
+
+    }
+    to{
+        width: 100%;
+
+        opacity: 1;
+        background-color: #DD7230;
+        border: solid 2px #DD7230;
+    }
+}
+.navbar .menu li:nth-child(1){
+    animation: floatBlock 1.2s forwards;
+}
+.navbar .menu li:nth-child(2){
+    animation: floatBlock 1s forwards;
+}
+.navbar .menu li:nth-child(3){
+    animation: floatBlock .8s forwards;
+}
+.navbar .menu li:nth-child(4){
+    animation: floatBlock .6s forwards;
+}
+.navbar .menu li:nth-child(5){
+    animation: floatBlock .4s forwards;
+}
+.headerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+}
+.headerContent .cardProfile{
+    /* background: #F4C95D; */
+    color: #DD7230;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    height: 85%;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../img/bg-card-profile.png');
+    background-size: cover;
+    animation: floatBlock .9s forwards;
+}
+@keyframes floatBlock {
+    from {
+        opacity: 0;
+        transform: translate3d(-200px, 0px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0px, 0px);
+    }
+}
+
+/* Profile-Header */
+.cardProfile .profileIcon img{
+    width: 220px;
+}
+
+/* Profile-Sobre */
+
+.cardProfile .sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 120px;
+    flex-direction: column;
+}
+.cardProfile .sobre p{
+    border-bottom: solid 3px #DD7230;
+    width: 65%;
+    font-weight: 500;
+}
+.cardProfile .sobre span{
+    font-style: italic;
+    font-weight: 1000;
+    width: 60%;
+}
+
+.redesSociais a i{
+    color: #DD7230;
+    font-size: 2rem;
+    padding: 5px;
+    border: solid 2px #DD7230;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.redesSociais a:hover i{
+    animation: SocialRotate .7s forwards;
+}
+@keyframes SocialRotate {
+    from{
+        transform: rotate(90deg);
+        transition: 1s;
+    }to{
+        transform: rotate(0deg);
+        color: rgba(249, 155, 88, 100%);
+        background: #DD7230;
+    }
+    
+}
+
+/* Slide */
+
+.slideContent{
+    animation: slideFloat 1s forwards;
+    width: 700px;
+    height: 60vh;
+    background-color: #DD7230;
+}
+@keyframes slideFloat {
+    from {
+        width:  0;
+        position: unset;
+        transform: translate3d(-200px,0px, 0px);
+    }
+    to {
+        width: 1;
+        transform: translate3d(0, 0px, 0px);
+    }
+}
