@@ -12,7 +12,7 @@ li, a {
 .header {
   width: 100%;
   height: 100vh;
-  background-image: url("../img/background-header.png");
+  background-image: url("../img/bg-teste4.svg");
   background-size: cover;
 }
 
@@ -37,6 +37,7 @@ li, a {
 }
 .navbar .menu li{
     padding: 0 10px;
+    margin: 0 5px;
     text-transform: uppercase;
     font-weight: bold;
     display: flex;
@@ -49,32 +50,18 @@ li, a {
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 2px;
-    color: #DD7230;
+    color: white;
 }
 
-hr{
-    width: 0px;
-    border: solid 1.5px transparent;
-    
+.navbar .menu li:hover{
+    transition: .5s;
+    background-color: #FFB068;
+    border-radius: 7px;
 }
-.navbar .menu li:hover hr{
-    animation: hoverBlock .7s forwards;
-    width: 0px;
-}
-@keyframes hoverBlock {
-    from{
-        width: 0%;
-        transition: .3s;
-        background-color: #DD7230;
-
-    }
-    to{
-        width: 100%;
-
-        opacity: 1;
-        background-color: #DD7230;
-        border: solid 1.5px #DD7230;
-    }
+li.ativo{
+    transition: .5s;
+    background-color: #FFB068;
+    border-radius: 7px;  
 }
 .navbar .menu li:nth-child(1){
     animation: floatBlock 1.2s forwards;
@@ -93,9 +80,38 @@ hr{
 }
 .headerContent{
     display: flex;
+    flex-direction: column;
+    /* padding: 0 7rem; */
+    box-sizing: border-box;
+    /* gap: 20px; */
+    height: 85vh;
+    width: 90%;
+}
+.headerContent .head{
+    /* padding: 0 7rem; */
+    padding-left: 7rem;
+    padding-right: 4rem;
+    height: 80%;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 80vh;
+    justify-content: space-between;
+}
+.headerContent .footer{
+    /* margin-right: 7vw; */
+    height: 20%;
+    display: flex;
+    align-self: flex-end;
+}
+.headerContent .footer > div{
+    display: flex;
+    align-items: center;
+}
+.headerContent .footer img{
+    z-index: 1;
+    padding: 5px;
+    box-sizing: border-box;
+ max-height: 100%;
+ max-width: 90%;
 }
 .headerContent .cardProfile{
     /* background: #F4C95D; */
@@ -103,12 +119,13 @@ hr{
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     text-align: center;
     padding: 15px;
     border-radius: 15px;
-    height: 85%;
+    /* height: 85%; */
+    max-height: 470px;
     font-family: 'Jost', sans-serif;
     background-image: url('../img/bg-card-profile.png');
     background-size: cover;
@@ -246,3 +263,81 @@ hr{
         transform: translate3d(0, 0px, 0px);
     }
 }
+
+.containerTecnologia{
+    background-image: url('../img/background-tecno.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px;
+}
+.containerTecnologia div.titulo{
+    box-sizing: border-box;
+}
+
+/* ArrowBox Animate */
+.boxArrowAnimate{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+}
+.boxArrowAnimate .item{
+    background-image: url('../img/arrow-vector.svg');
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 53px;
+    height: 30px;
+    opacity: 1;
+    background-color: red;
+}
+
+/* Accordion Tecnologia */
+.boxTecnologia{
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin-right: 6vw; */
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    /* width: 60vw; */
+}
+.boxTecnologia .accordionItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxTecnologia .circleTec{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background: rgba(255,255,255, .6);
+}
+.boxTecnologia .itemTec{
+    background-image: url('../img/bg-accordion-tec.svg');
+    background-size: cover;
+    width: 280px;
+    height: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.itemTec h2{
+    font-family: 'M Plus 1p', sans-serif;
+}
+.itemTec h2::before{
+    content: '⮞';
+}
+.itemTec span, .itemTec h2{
+    margin-left: 3.5rem;
+    color: white;
+
+}
+    

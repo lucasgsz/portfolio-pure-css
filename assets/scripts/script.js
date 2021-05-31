@@ -24,3 +24,22 @@ function initSlideScript(){
     })
 }
 initSlideScript();
+
+function initSectionMenuDisplay(){
+    const liArray = document.querySelectorAll('.menu nav ul li');
+    liArray[0].classList.add('ativo');
+    
+    function sectionMenu(){
+        liArray.forEach((item)=>{
+            item.classList.remove('ativo');
+        })
+        this.classList.add('ativo');
+    }
+    
+    liArray.forEach((item)=>{
+        
+        item.addEventListener('click', sectionMenu);
+    });
+}
+initSectionMenuDisplay();
+
