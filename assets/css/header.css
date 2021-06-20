@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  /* color: initial; */
+}
+
+.header {
+  height: 100vh;
+  background-color: white;
+  box-sizing: border-box;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: royalblue; */
+  height: 15vh;
+  box-sizing: border-box;
+}
+.header .headerContainer {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Navbar Header */
+.header .navbar .logo {
+  width: 20%;
+}
+.header .navbar .menu {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .navbar .menu nav ul {
+  display: flex;
+  gap: 10px;
+  margin: 0 30px;
+}
+.header .navbar .menu nav ul li a {
+  margin: 0 10px;
+  text-transform: uppercase;
+  color: rgba(0, 145, 255, 1);
+  font-family: "Jost";
+  font-weight: 500;
+}
+.header .navbar .menu nav ul li a.ativo {
+  padding: 0 5px;
+  border-bottom: solid 2px rgba(0, 145, 255, 1);
+}
+.header .navbar .menu nav ul li a[type="button"] {
+  color: rgba(0, 145, 255, 1);
+  border: solid 2px rgba(0, 145, 255, 1);
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 5px;
+}
+.header .navbar .menu nav ul li a[type="button"]:hover {
+  transition: 0.7s;
+  background-color: rgba(0, 145, 255, 1);
+  color: white;
+}
+.header .navbar .logo img {
+  display: flex;
+  width: 100%;
+}
+
+/* Container Header */
+
+.headerContainer .mapaSite {
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  color: white;
+}
+.headerContainer .mapaSite h2 {
+  text-transform: uppercase;
+}
+.headerContainer .mapaSite h2::before {
+  content: "⯈";
+}
+.headerContainer .mapaSite li {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 5px 20px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.headerContainer .mapaSite li.ativo {
+}
+
+.headerContainer .redesSociais {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.headerContainer .redesSociais a i {
+  color: rgba(0, 145, 255, 1);
+  font-size: 1.5rem;
+  padding: 5px;
+  border: solid 2px rgba(0, 145, 255, 1);
+  border-radius: 8px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.headerContainer .redesSociais a:hover i {
+  animation: SocialRotate 0.7s forwards;
+}
+@keyframes SocialRotate {
+  from {
+    transform: rotate(90deg);
+    transition: 1s;
+  }
+  to {
+    transform: rotate(0deg);
+    color: white;
+    background: rgba(0, 145, 255, 1);
+  }
+}
+
+.headerContainer .cardProfile {
+  /* background: #F4C95D; */
+  color: rgba(0, 145, 255, 1);
+  margin-right: 90px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  /* height: 85%; */
+  max-height: 470px;
+  font-family: "Jost", sans-serif;
+  background-image: url("../img/bg-card-profile.png");
+  background-size: cover;
+  animation: floatBlock 0.9s forwards;
+}
+@keyframes floatBlock {
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, 0px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0px);
+  }
+}
+
+/* Profile-Header */
+.cardProfile .profileIcon img {
+  width: 220px;
+}
+
+/* Profile-Sobre */
+
+.cardProfile .sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  flex-direction: column;
+}
+.cardProfile .sobre p {
+  border-bottom: solid 3px rgba(0, 145, 255, 1);
+  width: 65%;
+  font-weight: 500;
+}
+.cardProfile .sobre span {
+  font-style: italic;
+  font-weight: 1000;
+  width: 60%;
+}
+
+.headerContainer .boasVindasContainer {
+  text-align: center;
+  color: #1d1e20;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.headerContainer .boasVindasContainer .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.headerContainer .boasVindasContainer .titulo h2{
+    font-family: 'Jost';
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    line-height: 55px;
+    /* font-style: italic; */
+    width: 100px;
+    align-self: flex-start;
+}
+.headerContainer .boasVindasContainer .titulo hr{
+    height: 10px;
+    background-color: #1d1e20;
+    margin: 1px 0;
+    border: none;
+    width: 250px;
+}
+.headerContainer .boasVindasContainer .sobre{
+
+}
+.headerContainer .boasVindasContainer .sobre p{
+    font-family: 'Jost';
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/*
+.headerContainer .boasVindasContainer .contatoContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+ .headerContainer .boasVindasContainer .contatoContent button{
+    background-color: #ed125f;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+
+}
+.headerContainer .boasVindasContainer .contatoContent button:hover{
+    transition: .3s;
+    padding: 12px 53px;
+} */
