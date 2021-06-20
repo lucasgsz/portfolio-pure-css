@@ -29,7 +29,7 @@ a {
   height: 85vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
@@ -77,37 +77,39 @@ a {
   width: 100%;
 }
 
-/* Container Header */
 
-.headerContainer .mapaSite {
-  /* padding: 10px; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px;
+
+/* TESTEEEE */
+
+.header .navbar{
+  background-color: rgba(0, 145, 255, 1);
+}
+.header .navbar .menu nav ul li a {
   color: white;
 }
-.headerContainer .mapaSite h2 {
-  text-transform: uppercase;
+.header .navbar .menu nav ul li a.ativo {
+  border-bottom: solid 2px white;
 }
-.headerContainer .mapaSite h2::before {
-  content: "⯈";
+.header .navbar .menu nav ul li a[type="button"] {
+  color: white;
+  border: solid 2px white;
 }
-.headerContainer .mapaSite li {
-  background-color: rgba(0, 0, 0, 0.2);
-  margin: 5px 20px 0;
-  padding: 5px;
-  border-radius: 5px;
+.header .navbar .menu nav ul li a[type="button"]:hover {
+  background-color: white;
+  color: rgba(0, 145, 255, 1) ;
 }
-.headerContainer .mapaSite li.ativo {
-}
+
+
+
+/* Container Header */
 
 .headerContainer .redesSociais {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  /* flex-direction: column; */
+  /* gap: 0px; */
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
 }
 .headerContainer .redesSociais a i {
   color: rgba(0, 145, 255, 1);
@@ -189,7 +191,7 @@ a {
 }
 
 .headerContainer .boasVindasContainer {
-  text-align: center;
+  text-align: start;
   color: #1d1e20;
   display: flex;
   flex-direction: column;
@@ -234,15 +236,16 @@ a {
 
 
 
-/*
+
 .headerContainer .boasVindasContainer .contatoContent {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin: 20px 0;
 }
  .headerContainer .boasVindasContainer .contatoContent button{
-    background-color: #ed125f;
+    background-color: rgba(0, 145, 255, 1);
     cursor: pointer;
     color: white;
     font-size: 1.1rem;
@@ -253,5 +256,5 @@ a {
 }
 .headerContainer .boasVindasContainer .contatoContent button:hover{
     transition: .3s;
-    padding: 12px 53px;
-} */
+    padding: 11px 52  px;
+}
